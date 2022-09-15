@@ -1,17 +1,17 @@
 package com.hoang.springdemo.dao;
 
-import com.hoang.springdemo.entity.Customer;
-
 import java.util.List;
 
+import com.hoang.springdemo.entity.Customer;
+
 public interface CustomerDAO {
-    List<Customer> getCustomers();
 
-    void saveCustomer(Customer customer);
+	List<Customer> getCustomers();
 
-    Customer getCustomer(int id);
+	void saveCustomer(Customer theCustomer);
 
-    void deleteCustomer(int id);
+	Customer getCustomer(int theId);
 
-    List<Customer> searchCustomers(String searchName);
+	void deleteCustomer(int theId);
+	
 }

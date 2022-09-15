@@ -31,7 +31,7 @@ public class DemoAppConfig implements WebMvcConfigurer {
 	@Autowired
 	private Environment env;
 	
-	private final Logger logger = Logger.getLogger(getClass().getName());
+	private Logger logger = Logger.getLogger(getClass().getName());
 	
 	@Bean
 	public DataSource myDataSource() {
@@ -85,14 +85,15 @@ public class DemoAppConfig implements WebMvcConfigurer {
 		String propVal = env.getProperty(propName);
 		
 		// now convert to int
-
-		return Integer.parseInt(propVal);
+		int intPropVal = Integer.parseInt(propVal);
+		
+		return intPropVal;
 	}	
 	
 	@Bean
 	public LocalSessionFactoryBean sessionFactory(){
 		
-		// create session factory
+		// create session factorys
 		LocalSessionFactoryBean sessionFactory = new LocalSessionFactoryBean();
 		
 		// set the properties

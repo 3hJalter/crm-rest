@@ -1,17 +1,17 @@
 package com.hoang.springdemo.service;
 
-import com.hoang.springdemo.entity.Customer;
-
 import java.util.List;
 
+import com.hoang.springdemo.entity.Customer;
+
 public interface CustomerService {
-    List<Customer> getCustomers();
 
-    void saveCustomer(Customer customer);
+	public List<Customer> getCustomers();
 
-    Customer getCustomer(int id);
+	public void saveCustomer(Customer theCustomer);
 
-    void deleteCustomer(int id);
+	public Customer getCustomer(int theId);
 
-    List<Customer> searchCustomers(String searchName);
+	public void deleteCustomer(int theId);
+	
 }
